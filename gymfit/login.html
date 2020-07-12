@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="css\login.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
+
+</head>
+<body style="display: none;">
+    
+
+<div class="wrapper fadeInDown">
+    <h3 style="margin-bottom: 35px;">Sign in to Healthy Lifestyle</h3>
+  <div id="formContent">
+    <!-- Login Form -->
+    <form id="login_form">
+      <input type="email" id="email" class="fadeIn second" name="email" placeholder="email">
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Sign In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+
+<script>
+
+var user = window.localStorage.getItem("user");
+    if (user){
+      user = JSON.parse(user);
+      if (user.token){
+        window.location = "index.html";
+      }else{
+        $('body').show();
+      }
+    }else{
+      $('body').show();
+    }
+
+
+  $('#login_form').validate({
+    submitHandler: function(form) {
+      var user = {
+        email: $('#login_form input[type="email"]').val(),
+        password: $('#login_form input[type="password"]').val()
+      }
+
+      $.post("rest/login", user).done(function(data){
+        window.localStorage.setItem("user", JSON.stringify(data));
+        window.location = "index.html";
+        toastr.success('welcome ' + user.email);
+      }).fail(function(error){
+        toastr.error(error.responseText)
+      });
+
+    }
+  });
+
+</script>
+</body>
+
+
+</html>
