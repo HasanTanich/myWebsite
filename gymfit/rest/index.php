@@ -63,5 +63,11 @@ Flight::route('POST /login', function(){
   }
 });
 
+Flight::route('POST /register', function(){
+  $user = Flight::request()->data->getData();
+  Flight::user_dao()->add($user);
+});
+
+
 Flight::start();
 ?>

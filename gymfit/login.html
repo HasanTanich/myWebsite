@@ -26,12 +26,14 @@
     <!-- Remind Passowrd -->
     <div id="formFooter">
       <a class="underlineHover" href="#">Forgot Password?</a>
-      <a href="#" onclick="open_register_modal()">SIGN UP</a>
+      <br> </br>
+      <span><a href="#" onclick="open_register_modal()">sign up</a> </span>
     </div>
 
   </div>
 </div>
 
+</body>
 <!-- Register Modal -->
 <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -46,20 +48,21 @@
           <div class="modal-body">
               <div class="form-group">
                   <label>Name</label>
-                  <input type="text" class="form-control" name="full_name" placeholder="Enter your name">
+                  <input type="text" class="fadeIn second" name="name" placeholder="Enter your name">
               </div>
               <div class="form-group">
                   <label>Email address</label>
-                  <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                  <input type="email" class="fadeIn third" aria-describedby="emailHelp" placeholder="Enter email">
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
               <div class="form-group">
                   <label>Password</label>
-                  <input type="password" class="form-control" placeholder="Password">
+                  <input type="password" class="fadeIn third" placeholder="Password">
               </div>
           </div>
           <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <br> </br>
               <button type="submit" class="btn btn-primary">Register</button>
           </div>
       </form>
@@ -97,7 +100,6 @@ var user = window.localStorage.getItem("user");
       $.post("rest/login", user).done(function(data){
         window.localStorage.setItem("user", JSON.stringify(data));
         window.location = "index.html";
-        toastr.success('welcome ' + user.email);
       }).fail(function(error){
         toastr.error(error.responseText)
       });
@@ -106,11 +108,32 @@ var user = window.localStorage.getItem("user");
   });
 
   function open_register_modal(){
-    
+    $('#register-modal').modal('toggle');
   }
 
+  $('#register-form').validate({
+    submitHandler: function(form) {
+      
+      var user = {
+        name: $('#register-form input[name="name"]').val(),
+        email: $('#register-form input[type="email"]').val(),
+        password: $('#register-form input[type="password"]').val()
+      }
+
+      $.post("rest/register", user).done(function(data){
+        toastr.success('You are registered now, log in please');
+        window.location = "login.html";
+      }).fail(function(error){
+        toastr.error(error.responseText)
+      });
+
+    }
+  });
+
+
+
 </script>
-</body>
+
 
 
 </html>
