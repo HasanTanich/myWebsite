@@ -8,40 +8,57 @@ body {
   color: rgba(0, 0, 0, 0.6);
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 700;
   color: #232323;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 48px;
   text-transform: uppercase;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 38px;
   text-transform: uppercase;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 28px;
   line-height: 38px;
   text-transform: uppercase;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 22px;
   line-height: 30px;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 18px;
   line-height: 24px;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 400;
@@ -55,23 +72,31 @@ h6, .h6 {
   font-family: "Montserrat", sans-serif;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   width: 100%;
+  height: 100%;
 }
 
 .navbar-toggle .icon-bar {
   background: #f5634b;
 }
 
-input[type="email"], input[type="password"], input[type="text"], input[type="tel"] {
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"] {
   box-shadow: none;
   height: 50px;
   outline: none;
   font-size: 14px;
 }
 
-input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, input[type="tel"]:focus {
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus {
   box-shadow: none;
   border: 1px solid #f5634b;
 }
@@ -98,12 +123,16 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   border: 1px solid transparent;
 }
 
-.btn-main, .btn-transparent, .btn-small {
+.btn-main,
+.btn-transparent,
+.btn-small {
   background: linear-gradient(90deg, #f5634b 0%, #fe9418 100%);
   color: #fff;
 }
 
-.btn-main:hover, .btn-transparent:hover, .btn-small:hover {
+.btn-main:hover,
+.btn-transparent:hover,
+.btn-small:hover {
   background: linear-gradient(90deg, #fe9418 0%, #f5634b 100%);
   color: #fff !important;
   -webkit-transform: translateY(-5px);
@@ -167,7 +196,9 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   border-radius: 50px;
 }
 
-.btn.active:focus, .btn:active:focus, .btn:focus {
+.btn.active:focus,
+.btn:active:focus,
+.btn:focus {
   outline: 0;
 }
 
@@ -207,11 +238,13 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   padding: 155px 0 100px;
 }
 
-.overly, .bg-4 {
+.overly,
+.bg-4 {
   position: relative;
 }
 
-.overly:before, .bg-4:before {
+.overly:before,
+.bg-4:before {
   content: "";
   position: absolute;
   left: 0;
@@ -224,11 +257,19 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   opacity: 0.8;
 }
 
-.overly-2, .page-title, .slider, .cta, .textimonial {
+.overly-2,
+.page-title,
+.slider,
+.cta,
+.textimonial {
   position: relative;
 }
 
-.overly-2:before, .page-title:before, .slider:before, .cta:before, .textimonial:before {
+.overly-2:before,
+.page-title:before,
+.slider:before,
+.cta:before,
+.textimonial:before {
   content: "";
   position: absolute;
   left: 0;
@@ -241,7 +282,8 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   opacity: 0.8;
 }
 
-#success, #error {
+#success,
+#error {
   display: none;
 }
 
@@ -272,10 +314,11 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 a {
-  transition: all .35s ease;
+  transition: all 0.35s ease;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #f5634b !important;
   text-decoration: none !important;
   outline: 0;
@@ -303,10 +346,11 @@ a:hover, a:focus {
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1px;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
-.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
   color: #f5634b;
 }
 
@@ -337,7 +381,7 @@ a:hover, a:focus {
   visibility: hidden;
   opacity: 0;
   z-index: 10;
-  transition: all .3s ease 0s;
+  transition: all 0.3s ease 0s;
   display: block;
 }
 
@@ -346,7 +390,7 @@ a:hover, a:focus {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 12px;
-  padding: .55rem 2rem;
+  padding: 0.55rem 2rem;
 }
 
 .dropdown-toggle::after {
@@ -401,7 +445,7 @@ ul.dropdown-menu li {
   letter-spacing: 5px;
   border: 2px solid #fff;
   padding: 3px 15px 5px 15px;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .bg-2 {
@@ -433,7 +477,7 @@ ul.dropdown-menu li {
 }
 
 .why .card {
-  transition: all .4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 .why .card:hover {
@@ -451,7 +495,7 @@ ul.dropdown-menu li {
 
 .hover-style-1:before {
   position: absolute;
-  content: '';
+  content: "";
   left: 0px;
   top: 0px;
   width: 100%;
@@ -461,7 +505,11 @@ ul.dropdown-menu li {
   border-color: #f5634b;
 }
 
-.hover-style-1 h3, .hover-style-1 p, .hover-style-1 a, .hover-style-1 i, .hover-style-1 h4 {
+.hover-style-1 h3,
+.hover-style-1 p,
+.hover-style-1 a,
+.hover-style-1 i,
+.hover-style-1 h4 {
   position: relative;
   transition: all 600ms ease;
 }
@@ -495,7 +543,7 @@ ul.dropdown-menu li {
 
 .course-widget li a {
   color: #232323;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .team-content-overlay li a {
@@ -519,7 +567,7 @@ ul.dropdown-menu li {
   opacity: 0;
   width: 100%;
   background-color: rgba(41, 40, 45, 0.85);
-  transition: opacity .3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
 
 .overlay-content {
@@ -531,7 +579,7 @@ ul.dropdown-menu li {
   text-align: center;
   top: 50%;
   -webkit-transform: translateY(-40%);
-          transform: translateY(-40%);
+  transform: translateY(-40%);
 }
 
 .team-item:hover .team-content-overlay {
@@ -547,7 +595,7 @@ ul.dropdown-menu li {
 }
 
 .team-wrap .card-subtitle:after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
@@ -601,7 +649,8 @@ ul.dropdown-menu li {
   font-size: 10px;
 }
 
-.slick-slide:focus, .slick-slide a {
+.slick-slide:focus,
+.slick-slide a {
   outline: none;
 }
 
@@ -736,7 +785,7 @@ ul.dropdown-menu li {
 
 .footer p {
   color: #fff;
-  opacity: .8;
+  opacity: 0.8;
   font-size: 14px;
 }
 
@@ -746,7 +795,7 @@ ul.dropdown-menu li {
 
 .footer-menu li a {
   color: #fff;
-  opacity: .8;
+  opacity: 0.8;
   font-size: 14px;
 }
 
@@ -761,7 +810,7 @@ ul.dropdown-menu li {
 
 .footer-socials li a {
   color: #fff;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .recent-blog a {

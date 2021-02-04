@@ -1,9 +1,9 @@
 <?php 
 
 class Config{
-    const CONNECTION_STRING = "mysql:host=remotemysql.com;dbname=pGW6k3cEwi";
-    const USERNAME = "pGW6k3cEwi";
-    const PASSWORD = "ZYCLd3WfqZ";
+    const CONNECTION_STRING = "mysql:host=localhost;dbname=web-project";
+    const USERNAME = "root";
+    const PASSWORD = "";
 
     const JWT_SECRET = 'myProject';
 }
