@@ -4,7 +4,7 @@ require_once 'BaseDao.class.php';
 
 class UserDao extends BaseDao{
 
-  public $table = 'users2';
+  public $table = 'users';
 
   public function __construct(){
     parent::__construct($this->table);

@@ -21,7 +21,7 @@ Flight::route('GET /reviews', function(){
 
 Flight::route('GET /review', function(){
   $id = Flight::request()->query['id'];
-  $review = Flight::review_dao()->get_by_id($id);
+  $review = Flight::user_dao()->get_by_id($id);
   Flight::json($review);
 });
 
@@ -33,7 +33,7 @@ Flight::route('POST /reviews', function(){
 
 Flight::route('POST /review', function(){
   $request = Flight::request()->data->getData();
-  $id = 23;
+  $id = Flight::request()->query['id'];
   Flight::review_dao()->update_review($request, $id);
   Flight::json('Updated');
 });
